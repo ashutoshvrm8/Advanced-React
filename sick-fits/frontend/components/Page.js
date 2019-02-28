@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Meta from './Meta';
+import styled from 'styled-components';
+
+const MyButton = styled.button`
+    background: red;
+    font-size: 100px;
+
+    span {
+        font-size: 150px;
+    }
+`;
 
 class Page extends Component {
     render() {
@@ -8,6 +18,10 @@ class Page extends Component {
             <div>
                 <Meta />
                 <Header />
+                <MyButton>
+                    Click Me
+                    <span>!!</span>
+                </MyButton>
                 {this.props.children}
             </div>
         );
